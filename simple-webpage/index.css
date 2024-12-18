@@ -1,0 +1,191 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+/* header-css */
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    background-color: white;
+    z-index: 1;
+}
+.input-bar{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 40px;
+    
+}
+
+
+.icon1{
+    position: relative;
+}
+
+
+
+.hamburger{
+    margin-left: 20px;
+    margin-right: 24px;
+}
+.search{
+    flex:1;
+    height: 40px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.search-button{
+    height: 46px;
+    width: 60px;
+    margin: 10px 0px 0px -2px;
+    border-radius: 2px;
+    border-left:0px;
+    background-color: white;
+    border:1px solid gray;
+    
+}
+/* tootltip start here */
+.input-bar2{
+    position: relative;
+}
+.tooltip{
+    position: absolute;
+    background-color: white;
+    left:55%;
+    bottom: -30px;
+    border-radius: 3px;
+    padding: 2px;
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.15s all ;
+}
+.input-bar2:hover .tooltip{
+    visibility: visible;
+    transition: 0.015s ease-in;
+}
+/* tooltip end here */
+.right-section{
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.icon1 , .icon2{
+    width:20px;
+    font-size: 20px;
+    margin-right: 50px;
+}
+#im1{
+    width:16px;
+    height: 20px;
+    border-radius: 50px;
+    margin-right: 40px;
+    
+}
+
+.icon1 , .icon2 , #im1 ,.search-button:hover{
+    cursor:pointer;
+}
+/* sidebar-css */
+.sidebar{
+    position:fixed;
+    left:0px;
+    bottom: 0px;
+    top:50px;
+    z-index: 1;
+    width:72px;
+    background-color:white;
+}
+.sidebar-box{
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.sidebar-box div{
+    font-size: 10px;
+}
+.sidebar-box:hover{
+    background-color: rgb(235, 235, 235) ;
+    cursor:pointer;
+}
+.sidebar-box img{
+    height: 24px;
+    width:20px;
+}
+.demo{
+    border:1px solid black;
+    height: 330px;
+    border-radius: 12px;
+    width:250px;
+    margin:20px;
+    overflow: hidden;
+    opacity: 0.8;
+}
+.demo:hover{
+   opacity: 1;
+   cursor: pointer;
+}
+.head{
+    cursor: pointer;
+}
+
+img{
+   width:250px;
+   height: 170px;
+   object-fit:fill;
+}
+h3{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+p{
+    margin-top: 0px;
+    text-wrap: wrap;
+    font-size: 13px;
+    text-indent: 8px;
+    margin:2px;
+}
+button{
+    margin:20px 60px;
+    background-color: lightseagreen;
+    border: 2px;
+    border-radius: 5px;
+}
+
+/* For tooltip example */
+/* .contain{
+    position: relative;
+}
+
+.hometool{
+   background-color: aquamarine;
+   position: absolute;
+   bottom:-30px;
+   border-radius: 2px;
+   visibility: hidden;
+   z-index: 1;
+}
+.contain:hover .hometool{
+    visibility: visible;
+}  */
+/* example end here */
+
+#scrolltop{
+    display: inline-block;
+    margin-top: 1200px;
+   background-color: black;
+   border-radius: 50px;
+   padding: 10px;
+}

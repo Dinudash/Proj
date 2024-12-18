@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+     th,td {
+        border:1px solid black;
+        /* text-align: left; */
+        
+     }
+table{
+    border-collapse: collapse;
+    width:500px;
+} */
+ tr:nth-child(even){
+    background-color: gray;
+} 
+    </style>
+    
+<div class="container">
+    <div>
+        <h1>Let see the filter </h1>
+        <input placeholder="Search.." id="ip" type="text" style="margin-left: 150px;padding:5px; margin-bottom: 10px;">
+    </div>
+  <table>
+    <thead>
+       <tr>
+        <th>Fname</th>
+        <th>Lname</th>
+        <th>Result</th>
+       </tr>
+    </thead>
+    <tbody id="tbr"  style="text-align: center !important;">
+       <tr>
+        <td>Dinesh</td>
+        <td>Rajendran</td>
+        <td>Pass</td>
+       </tr>
+       <tr >
+        <td>Ramesh</td>
+        <td>Khan</td>
+        <td>Fail</td>
+       </tr>
+       <tr>
+        <td>Dhanush</td>
+        <td>raj</td>
+        <td>Pass</td>
+       </tr>
+    </tbody>
+  </table>
+</div>  
+
+   
+</body>
+<script>
+   
+$(document).ready(function(){
+   $("#ip").on("keyup",function(){
+   var value = $(this).val().toLowerCase();
+   $("tbody tr").filter(function(){
+      $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1);
+   });
+   });
+
+})
+ 
+</script>
+</html>

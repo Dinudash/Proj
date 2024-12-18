@@ -1,0 +1,427 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"  />
+    
+</head>
+<body >
+    <style>
+      :root{
+        --clr-title: rgb(150, 65, 229);
+     
+      } 
+       
+
+
+        *{
+    margin: 0;
+    padding: 0;
+}
+ body{
+  height: 100vh;
+ }
+ 
+ 
+  footer{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .small-content p{
+    font-family: sans-serif;
+    font-size:16px;
+    text-indent: 90px;
+  }
+  .small-content p::first-letter{
+    font-size: 25px ;
+
+  }
+  footer p{
+    text-align: center;
+  }
+  footer{
+    position: fixed;
+  }
+  .toggle{
+      width: 100%;
+      padding:5px 15px;
+      background-color: hsl(33, 100%, 70%);
+      text-align: end;
+    box-sizing: border-box;
+    display: none;
+  }
+  nav{
+  background-color: bisque;
+  width: 100%;
+  } 
+  nav ul {
+  width: 80%;
+  margin: 0 auto;
+    text-align: end;
+  }
+  ul li:not(.container ul li){
+  display: inline-block;
+  padding: 10px;
+  }
+  li a{
+  text-decoration: none;
+  color:black
+  }
+  ul li:hover{
+  background-color: beige;
+  color:hsl(0, 0%, 60%)
+  }
+  .line{
+    margin-top: 15px;
+    border: 1px dotted black;
+  }
+  #meal-plan-container .row-individual{
+    /* width:300px !important; */
+    background-color: aqua;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  #meal-plan-container .row-individual .row-title{
+    
+    padding: 5px;
+    text-align: center;
+    background-color:var(--clr-title);
+    border-radius: 5px;
+  }
+  
+  #meal-plan-container .row-individual .row-text{
+   
+    padding: 10px;
+    line-height: 20px;
+    
+  }
+  
+  .row-content, .row-content2 {
+    display: grid;
+    grid-template-columns:1fr;
+    @media (width>=640px) {
+      grid-template-columns: repeat(3,1fr);
+    }
+    @media (width>=900px) {
+      grid-template-columns: repeat(4,1fr);
+    }
+  } 
+   .row-individual{
+    box-shadow: 2px 2px 3.5px grey ;
+    margin-bottom: 30px;
+  }
+ 
+  h1{
+    display: inline-block;
+    width:90%;
+  }
+  #btn{
+    margin-left: -420px;
+  }
+  @media (max-width:732px){
+
+  /* .toggle{
+  display: block;
+  }
+  ul {
+  width: 100%;
+
+  }
+  ul li{
+  display: block;
+  text-align: center;
+  } */
+  
+  }
+  .lists{
+    display: flex;
+    justify-content: center;
+    transform-style:preserve-3d;
+    transform: perspective(1000px);
+  }
+  .lists .item{
+    margin-right: 10px;
+    transition: 0.5s;
+    filter: brightness(0);
+
+  }
+  .lists .item:hover{
+    filter: brightness(1);
+    transform: translateZ(200px);
+  }
+  .lists .item:hover + * {
+      filter: brightness(0.6);
+      transform: translateZ(150px) rotateY(40deg)
+    }
+    .lists .item:hover + * + * {
+      filter: brightness(0.4);
+      transform: translateZ(70px) rotateY(20deg)
+    } 
+   .lists .item:has(+ *:hover){
+      filter: brightness(0.6);
+      transform: translateZ(150px) rotateY(-40deg)
+    }
+    .lists .item:has(+ * + *:hover){
+      filter: brightness(0.4);
+      transform: translateZ(70px) rotateY(-20deg)
+    } 
+.slider{
+  max-width:100%;
+ 
+}
+.banners{
+  position: relative;
+}
+.slider img{
+  display: block;
+   margin: 0 auto;
+}
+ .slider img:not(img:first-child){
+  display: none;
+ }
+ 
+.arrows #prev{
+  position: absolute;
+  
+  top: 150px;
+  left: 270px;
+  
+  cursor: pointer;
+}
+.arrows #next{
+  position: absolute;
+ 
+  top: 150px;
+  right: 300px;
+  
+  cursor: pointer;
+}
+
+   
+   
+      </style>
+      
+      <div id="meal-plan-container">
+      <nav>
+          <div class="toggle">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+          <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Service</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+          </ul>
+      </nav>
+      
+      
+      <div class="small-content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laboriosam facilis sint autem, laborum quo placeat possimus ut vel, sapiente quos enim dolore, incidunt non! Cupiditate, vero. Velit, in ipsa?
+        Facilis tenetur eum distinctio aliquid doloribus modi ipsa ullam in hic iusto, asperiores nisi corrupti dolor assumenda eligendi deleniti, quibusdam fuga cumque quo sunt voluptates fugit ex? Nobis, dignissimos doloribus!
+        Aperiam sint veniam possimus illo itaque ut natus? Nam itaque magni quis? Vel consequatur illo non quis laborum obcaecati nisi repellendus laudantium architecto expedita? Temporibus officia magni dolore cumque omnis.
+        Vitae impedit consequatur veritatis quibusdam molestias ad corrupti in aperiam sunt. Architecto quia suscipit, dicta, ut non unde est alias quasi numquam praesentium odio at veritatis officiis? Quisquam, dolorem repudiandae!</p>
+      </div>
+      
+      
+      <div class="main-plan__content">
+        <div class="plan-content">
+          <h1 style="text-align: center;text-shadow: 2px 2px 4px black;margin-bottom: 20px;">Weekly-plan</h1>
+          <span><button id="btn">Fetch</button></span>
+        </div>
+        <div class="row">
+          <div class="row-content">
+              <div class="row-individual">
+                <h4 class="row-title">Sunday</h4>
+                <div>
+                  <p class="row-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque similique perspiciatis!.</p>
+                </div>
+              </div>
+              <div class="row-individual">
+                <h4 class="row-title">Monday</h4>
+                <div>
+                  <p class="row-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque similique perspiciatis!.</p>
+                </div>
+              </div>
+              <div class="row-individual">
+                <h4 class="row-title">Tuesday</h4>
+                <div>
+                  <p class="row-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque similique perspiciatis!.</p>
+                </div>
+              </div>
+          </div>
+          <div class="row-content2">
+              <div class="row-individual">
+                <h4 class="row-title">Wednesday</h4>
+                <div>
+                  <p class="row-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque similique perspiciatis!.</p>
+                </div>
+              </div>
+              <div class="row-individual">
+                <h4 class="row-title">Thursday</h4>
+                <div>
+                  <p class="row-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque similique perspiciatis!.</p>
+                </div>
+              </div>
+              <div class="row-individual">
+                <h4 class="row-title">Friday</h4>
+                <div>
+                  <p class="row-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque similique perspiciatis!.</p>
+                </div>
+              </div>
+              <div class="row-individual">
+                <h4 class="row-title">Saturday</h4>
+                <div>
+                  <p class="row-text" data-info="3542542">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque similique perspiciatis!.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+     <div class="lists">
+      <div class="item"><img src="/static webpage/freeimg2.webp" width="100px"  height="200px" ></div>
+      <div class="item"><img src="/static webpage/freeimg4.avif" width="100px"  height="200px" alt="" ></div> 
+      <div class="item"><img src="/static webpage/freeimg3.avif" width="100px"  height="200px" alt="" ></div> 
+      <div class="item"><img src="/static webpage/freeimg2.webp" width="100px"  height="200px"  alt="" ></div> 
+      <div class="item"><img src="/static webpage/freeimg4.avif"  width="100px"  height="200px" alt=""></div> 
+      <div class="item"><img src="/static webpage/freeimg3.avif" width="100px"  height="200px" alt=""></div> 
+      <div class="item"><img src="/static webpage/freeimg2.webp" width="100px"  height="200px" alt="" ></div> 
+      <div class="item"><img src="/static webpage/freeimg4.avif" width="100px"  height="200px" alt="" ></div> 
+      <div class="item"><img src="/static webpage/freeimg3.avif" width="100px"  height="200px" alt="" ></div> 
+      <div class="item"><img src="/static webpage/freeimg2.webp" width="100px"  height="200px" alt="" ></div> 
+      <div class="item"><img src="/static webpage/freeimg4.avif" width="100px"  height="200px" alt=""></div> 
+      <div class="item"><img src="/static webpage/freeimg3.avif" width="100px"  height="200px" alt="" ></div> 
+          
+     </div>
+    <div class="banners">
+     <div class="slider">
+      <img src="/static webpage/freeimg3.avif" width="50%" alt="">
+      <img src="/static webpage/freeimg2.webp" width="50%" alt="">
+      <img src="/static webpage/freeimg4.avif" width="50%" alt="">
+        </div>
+      <div class="arrows">
+        <div><button id="prev">Previous</button></div>
+        <div><button id="next">Next</button></div>
+       </div>
+      </div>
+       
+      
+    
+     
+      <footer>
+        <p>@2024 .Cognizant.com</p>
+      </footer>
+</div> 
+    <script>
+        
+        let next =document.getElementById("next");
+        let prev =document.getElementById("prev");
+        let slider = document.querySelector(".slider")
+        // next.addEventListener("click",function(){
+        //   slider.append(slider.querySelector("img:first-child"))
+        // })
+        // prev.addEventListener("click",function(){
+        //   slider.prepend(slider.querySelector("img:last-child"))
+        // })
+        
+       $(function(){
+        $(".testing").click(function(){
+               $(".text").css("visibility","hidden")
+               $(".spinner").css("visibility","visible")
+        })
+        
+        let prev =document.getElementById("prev");
+       $("#prev").click(function(){
+         window.localStorage.removeItem("testing","Data observed in local storage")
+          
+       })
+       $("#next").click(function(){
+         let value = window.localStorage.getItem("testing");
+         console.log(value);
+         
+         
+       })
+       
+        
+        let api = "https://pokeapi.co/api/v2/pokemon/ditto";
+      //  let pokemonByName ="https://pokeapi.co/api/v2/pokemon"
+       $.getJSON(api).done(function(data){
+        console.log(data);
+        // let card = document.querySelectorAll(".row .row-title");
+        let cardText = document.querySelectorAll(".row-text")
+        let collection = [data.sprites.back_default ,data.sprites.back_shiny,data.sprites.front_default,data.sprites.front_shiny]
+              console.log(collection);
+        $("#btn").click(function(){
+              for(let i=0;i<cardText.length;i++){
+                for(let j=0;j<collection.length;j++){
+                  let collect = collection[j]
+                  let cards =cardText[i];
+                   let data = document.createElement("div");
+                   data.innerHTML=`<img src=${collect}>`
+                   $(data).appendTo(cards)
+                }
+                
+
+              }
+              
+           
+           
+            
+        })
+            
+             
+          // })
+
+           
+            //  let cardTitle = cardText;
+            //    $(cardTitle).html(`<img src=${x.back_shiny}>`)
+              
+              
+            // for(let element of Object.entries(data)){
+            //   console.log(element.sprites);
+              
+            //     $.each(element.sprites,function(ele){
+            //         console.log(ele.back_default);
+                    
+            //     })
+                
+                
+            // }
+            
+               
+                
+                  
+              // let cardContent = cardText
+              // $(cardContent).text(`${back_shiny}`)
+             
+              // $(cardContent).html("<img src='"+element +"'>")
+              // $(cardContent).html("<img src='"+element +"'>")
+              // $(cardContent).html("<img src='"+element +"'>")
+            // })
+            })
+
+
+             
+  
+        })
+       
+    
+      
+        // })
+    
+       
+      
+        
+       
+    </script>
+</body>
+</html>

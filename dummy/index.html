@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body >
+    <style>
+     *{
+      margin:0;
+      padding: 0;
+     }
+  img{
+    height: 20px;
+  }
+  body{
+    background-color: lightgray;
+    position: relative;
+  }
+  h1{
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  p , ul{
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    text-indent: 20px;
+    letter-spacing: 1px;
+  }
+  ul:has(li){
+    font-weight: bold;
+  }
+  p::first-letter{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  :modal{
+    border:1px solid  black;
+    border-radius: 5px;
+    width: 450px;
+    height: 250px;
+    background-color: beige;
+    display: none;
+    position: absolute;
+    top:70px;
+    left:250px;
+    box-shadow: 20px 30px 20px rgb(6, 6, 6) ;
+                
+                /* transition: 20s all ease-in-out; */
+  }
+  #endBut{
+    padding: 3px;
+    border: none;
+    margin-left: 40%;
+    background-image: linear-gradient(yellow,pink,skyblue );
+    margin-top:50px;
+  }
+ 
+    </style>
+    
+   <div class="main-container">
+    <div class="sub-container">
+      <h1>Ensure <img src="/dummy/White-BlackBackground.svg">
+      </h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur veritatis praesentium provident necessitatibus expedita corrupti commodi dolorem explicabo iusto aut rem veniam deleniti, maiores harum porro dolore sapiente reiciendis pariatur.
+      Minus deserunt illum eos blanditiis, iste nihil fugiat? Eum dicta id necessitatibus sed similique. Quos voluptate veritatis odio, odit harum quasi commodi doloremque esse omnis nam temporibus excepturi blanditiis dignissimos.
+      Culpa hic, modi eum quod vitae aliquid, officia impedit repellendus deserunt, architecto earum ipsam laudantium consequatur quam deleniti beatae eveniet quae. Corrupti minima soluta autem velit quos ea repellendus aperiam.
+      Excepturi dignissimos eius odit cumque dolorum obcaecati? Tempore, illum! Quas culpa rerum perferendis velit reiciendis reprehenderit consectetur animi optio. Doloremque esse ipsum incidunt necessitatibus quisquam dolores a nisi aperiam omnis?0</p>
+      <div>
+        <ul>
+          <li>Ensure</li>
+          <li>Similac</li>
+          <li>Pediasure</li>
+          
+        </ul>
+      </div>
+      <div>
+        <h1>
+          About the Brand
+        </h1>
+        <p>
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis voluptatum minima, nam illum laboriosam laborum. Hic at, nisi voluptatem vel unde inventore quaerat, ullam quo dolore placeat error, dignissimos libero.
+         Doloremque tenetur earum ea fugit quaerat alias nisi ab harum, quae officiis incidunt aliquam officia magni explicabo accusantium itaque totam quis deleniti iusto, recusandae autem esse maiores architecto! Vitae, inventore.
+         Recusandae at maiores exercitationem eum sit quia quos dolorem distinctio explicabo officiis magnam, ex consectetur, qui culpa? Cupiditate corporis, eveniet asperiores quasi doloribus pariatur odit debitis. Laborum temporibus quo eius.
+        </p>
+      </div>
+    </div>
+   </div>
+   
+   <dialog id="dialog">
+    <div>
+      <h1>
+        Ensure Brand Team
+      </h1>
+      <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nam dolore aspernatur fuga dolorem magni officiis vel ullam rerum! Molestiae dolorum ab quas hic quos dolores mollitia nobis ratione necessitatibus!*1 
+      </p>
+      <button id="endBut" onclick="getValue()">Confirm</button>
+    </div>
+   </dialog>
+  
+   
+   
+   
+
+</body>
+</html>

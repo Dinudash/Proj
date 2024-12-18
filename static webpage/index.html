@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="icon" href="free-images.jpg"></link>
+    <style>
+      :root{
+        --primary-color:bisque;
+        --f-style:sans-serif;
+        --body-color:aquamarine;
+        --f-color:white;
+        --bg-color:black;
+        --ul-li-color:cadetblue
+      }
+    *{
+      margin:0;
+      padding:0;
+    }
+     body{
+      background-color: var(--primary-color);
+      font-family: var(--f-style);
+     }
+     .header{
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left:0;
+      right: 0;
+      /* background-color: blueviolet; */
+     }
+     .header nav{
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      background-color: var(--body-color);
+      height: 50px;
+      
+     }
+    nav ul {
+      display: flex;
+      gap: 100px;
+      list-style-type: none;
+    }
+    nav ul li{
+      padding:14px;
+    }
+   h2{
+    padding:11px;
+   }
+     h2:hover, ul li:hover {
+       /* background-color:var(--ul-li-color) ; */
+       color:rgb(37, 153, 114);
+       cursor: pointer; 
+       text-shadow: 2px 1px 2.5px var(--primary-color);
+    }
+    img{
+      width:300px;
+      height: 300px;
+      border-radius: 5px;
+      opacity: 0.8;
+      transition: 0.5s;
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+    }
+    img:hover{
+       opacity: 1;
+       /* transform: scale(.9,.9); */
+       transform: translateZ(100px);
+    }
+  
+     .img-content1 , .img-content2, .img-content3 , .img-content4{
+      display: flex;
+      justify-content: center;
+      gap:5rem;
+      margin-top: 100px;
+      margin-bottom: 50px;
+     
+    } 
+    .img-content2 , .img-content4:nth-child(even){
+      flex-direction: row-reverse;
+
+    }
+   
+    .box1 ,.box2 ,.box3 , .box4{
+      width: 300px;
+      box-shadow: 2px 1.5px 2px rgb(111, 109, 109) ;
+      border-radius: 5px;
+      padding: 10px;
+      text-indent: 20px;
+      transition: 1s ease-in-out;
+    }
+    .box3, .box4{
+      text-align: center;
+    }
+    .box:hover{
+      box-shadow: 3px 3px 5px rgb(124, 129, 123);
+      outline:1px solid rgb(124, 129, 123) ;
+    }
+    footer{
+     position: absolute;
+     left:0;
+     right: 0;
+     color: var(--f-color);
+     text-align: center;
+     background-color: var(--bg-color);
+     height: 50px;
+     width: 100%;
+    }
+    footer p{
+      margin-top: 20px;
+    }
+    
+   
+    </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <nav>
+        <h2>Freestyle.com</h2>
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About</li>
+          <li>Services</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="img-content">
+      <div class="img-content1">
+        <div class="box box1">
+          <p>Visual literacy refers to the ability to “read” an image, much like the way we “read” language. This form
+            of literacy requires an awareness of “visual rhetoric”—the ways that visual images communicate
+            meaning. Visual rhetoric does not only include specific concepts of design or aesthetic theory. It also
+            describes how images reflect, communicate, and even shape cultural meaning. Visual literacy involves all
+            the processes of knowing and responding to visual images as well as the ideas that inform the
+            construction or manipulation of cultural images. </p>
+        </div>
+        <div class="img1">
+          <img src="../static webpage/free-images.jpg">
+        </div>
+      </div>
+      <div class="img-content2">
+        <div class="box box2">
+          <p>Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and highly specialized clade of Old World lizards with 200 species described as of June 2015.[1] The members of this family are best known for their distinct range of colours, being capable of colour-shifting camouflage. The large number of species in the family exhibit considerable variability in their capacity to change colour. For some, it is more of a shift of brightness (shades of brown); for others, a plethora of colour-combinations (reds, yellows, greens, blues) can be seen.. </p>
+        </div>
+        <div class="img2">
+          <img src="../static webpage/freeimg2.webp">
+        </div>
+      </div>
+      <div class="img-content3">
+        <div class="box box3">
+          <p>A leaf is a green above-ground plant organ. Its main functions are photosynthesis and gas exchange. A leaf is flat so it absorbs the most light, and thin, so that the sunlight can get to the chloroplasts in the cells. Most leaves have stomata, which open and close. </p>
+        </div>
+        <div class="img3">
+          <img src="../static webpage/freeimg3.avif">
+        </div>
+      </div>
+      <div class="img-content4">
+        <div class="box box4">
+          <p>Data privacy is the practice of protecting personal, private or sensitive information, ensuring it’s collected with the proper consent, kept secure and used only for authorized purposes, while respecting both individual rights and existing regulations.
+            Data privacy refers to the rules, practices and guidelines used to determine the way someone’s information is collected, protected and stored, as well as who has access to it </p>
+        </div>
+        <div class="img1">
+          <img src="../static webpage/freeimg4.avif">
+        </div>
+      </div>
+    </div>
+   <div class="outer" style="background-color: rgb(111, 14, 14); width:500px ;height:700px" >
+    <div class="inner" style="background-color: azure;width:200px; height:200px" ></div>
+   </div>
+    <div>
+      <div >
+          <footer>
+            <p>&copy; Copyright 2024. All contents are copyrighted.</p>
+
+          </footer>
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    
+</body>
+</html>
